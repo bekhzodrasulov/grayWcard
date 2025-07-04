@@ -1,62 +1,90 @@
+@font-face {
+  font-family: "Great Vibes";
+  src: url("GreatVibes-Regular.woff2") format("woff2"),
+    url("GreatVibes-Regular.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
 body {
   margin: 0;
   font-family: "Cormorant Infant", serif;
-  background: #f9f8f6;
-  color: #000;
-  text-align: center;
+  background-color: #fefefc;
+  color: #2c2c2c;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+.wrapper {
+  overflow: hidden;
 }
 
-.hero {
-  padding: 50px 20px;
+.invitation {
+  text-align: center;
+  width: 100%;
+  margin: auto;
+  max-width: 600px;
+  padding: 10px 0 0 0;
+}
+
+.column {
+  text-align: center;
+  background: #ffffff;
+  width: 100%;
+  padding: 20px;
+  box-sizing: border-box;
+  display: flex;
+  gap: 20px;
+  flex-direction: column;
+}
+
+.column.gray {
+  background-color: rgb(159, 158, 158);
+  color: #2c2c2c;
 }
 
 .hero h1 {
   font-family: "Great Vibes", cursive;
-  font-size: 80px;
+  font-size: 50px;
+  font-weight: 500;
+  line-height: 130%;
   margin: 0;
 }
 
-.hero h1 span {
-  display: block;
-}
-
-.date-section {
+.border-box {
+  border: 1px solid #51785d;
   padding: 20px;
+  text-align: center;
 }
 
-.date-section h2 {
-  font-size: 36px;
-}
-
-.text {
-  font-size: 18px;
-  max-width: 600px;
-  margin: 0 auto;
-  padding: 10px;
-}
-
-.names {
+h1 {
   font-size: 28px;
-  font-style: italic;
-  margin-top: 30px;
-  text-decoration: underline;
+  text-align: center;
 }
 
-.time {
-  font-size: 32px;
-  margin: 10px 0;
+h4 {
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+.photo img {
+  width: 100%;
+  border-radius: 10px;
 }
 
 .calendar table {
   border-collapse: separate;
   border-spacing: 10px 10px; /* горизонталь, вертикаль */
   margin: 0 auto;
-  font-size: 25px;
+  font-size: 18px;
   text-align: center;
 }
 
 .calendar th,
 .calendar td {
+  font-family: "Great Vibes", cursive;
   width: 40px;
   height: 40px;
 }
@@ -69,7 +97,7 @@ body {
 .highlight::before {
   content: "";
   position: absolute;
-  top: 60%;
+  top: 50%;
   left: 50%;
   width: 40px;
   height: 35px;
@@ -78,22 +106,76 @@ body {
   border-radius: 50%;
 }
 
-.location {
-  padding: 30px 20px;
+.text-block,
+.program,
+.chat,
+.contacts,
+.closing,
+.venue,
+.dress-code,
+.details,
+.qr {
+  text-align: center;
+  font-family: "Great Vibes", cursive;
+  font-size: 20px;
+  font-weight: 400;
 }
 
-.location h3 {
-  font-size: 26px;
+.palette {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 10px;
 }
 
-.location p {
-  font-size: 18px;
+.color {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  border: 1px solid #fff;
 }
 
-.footer {
-  padding: 20px;
-  font-style: italic;
+.dark-green {
+  background-color: #b55b4a;
 }
+.green {
+  background-color: #a3b18a;
+}
+.olive {
+  background-color: #e4d4b4;
+}
+.beige {
+  background-color: #cfe2f3;
+}
+.white {
+  background-color: #fcd5ce;
+  border: 1px solid #ccc;
+}
+
+.venue img {
+  width: 100%;
+  border-radius: 8px;
+}
+
+a {
+  color: inherit;
+  text-decoration: underline;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.qr img {
+  width: 100px;
+  height: 100px;
+  margin-top: 10px;
+}
+
+.wadding-date {
+  font-family: "Great Vibes", cursive;
+  font-size: 40px;
+  font-weight: 400;
+}
+
 .music-control {
   margin-bottom: 20px;
 }
@@ -104,67 +186,36 @@ body {
   border: none;
   cursor: pointer;
 }
-
-.location-icon-box {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  margin: 20px 0;
-}
-
-.location-icon-box i {
-  font-size: 48px;
-  color: #000;
-  margin-bottom: 10px;
-}
-
-.location-label {
-  border: 2px solid #000;
-  padding: 6px 20px;
-  border-radius: 30px;
-  text-decoration: none;
-  color: #000;
-  font-family: "Playfair Display", serif;
-  font-size: 20px;
-}
-.countdown-container {
-  display: flex;
-  justify-content: center;
-  margin: 30px 0;
-}
-
-.countdown {
-  display: flex;
-  gap: 20px;
-  padding: 15px 30px;
-  border: 2px solid #000;
-  border-radius: 40px;
-  background: #fff;
-  font-family: "Playfair Display", serif;
-}
-
-.countdown div {
-  text-align: center;
-}
-
-.countdown span {
-  display: block;
-  font-size: 28px;
-  font-weight: bold;
-}
-
-.countdown p {
-  margin: 0;
-  font-size: 18px;
-}
-
-.fade-in {
+/* Базовый класс для скрытых элементов */
+.animate {
   opacity: 0;
-  transform: translateY(20px);
-  transition: opacity 1s ease, transform 1s ease;
+  transition: all 2s ease-out;
+  will-change: opacity, transform;
 }
 
-.fade-in.visible {
+/* Картинки: слева направо */
+.slide-left {
+  transform: translateX(-50px);
+}
+.slide-left.visible {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+/* Картинки: справа налево */
+.slide-right {
+  transform: translateX(50px);
+}
+.slide-right.visible {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+/* Текст: снизу вверх */
+.fade-up {
+  transform: translateY(40px);
+}
+.fade-up.visible {
   opacity: 1;
   transform: translateY(0);
 }
