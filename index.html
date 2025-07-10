@@ -8,6 +8,24 @@
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Infant:wght@300;500&family=Great+Vibes&display=swap"
     rel="stylesheet" />
   <link rel="stylesheet" href="style.css" />
+   <script>
+      // Блокировать правый клик
+      document.addEventListener("contextmenu", (e) => e.preventDefault());
+
+      // Блокировать F12 и другие клавиши
+      document.addEventListener("keydown", function (e) {
+        if (
+          e.key === "F12" ||
+          (e.ctrlKey &&
+            e.shiftKey &&
+            (e.key === "I" || e.key === "J" || e.key === "C")) ||
+          (e.ctrlKey && e.key === "U") ||
+          (e.shiftKey && e.ctrlKey && e.key === "J")
+        ) {
+          e.preventDefault();
+        }
+      });
+    </script>
 </head>
 
 <body>
@@ -164,6 +182,17 @@
           </p>
           <p><a href="https://yandex.uz/maps/-/CHchNSma" target="_blank">Посмотреть на карте</a></p>
         </div>
+        <div class="footer">
+        <p>inviteu.io</p>
+        <div class="social">
+          <a href="https://t.me/inviteuio">
+            <img src="images/telegram.png" alt="telegram" />
+          </a>
+          <a href="https://www.instagram.com/inviteu_io/">
+            <img src="images/instagram.png" alt="instagram" />
+          </a>
+        </div>
+      </div>
       </section>
 
 

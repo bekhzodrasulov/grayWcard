@@ -218,3 +218,19 @@ a {
   opacity: 1;
   transform: translateY(0);
 }
+
+.footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.social {
+  display: flex;
+  gap: 10px;
+}
+
+.social img {
+  width: 30px;
+  height: 30px;
+}
